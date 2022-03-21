@@ -16,7 +16,8 @@ spending_counter = collections.Counter(spending_categories)
 top5 = spending_counter.most_common(5)
 # Convert the Dictionary to 2 Lists
 spend_dict = zip(*top5)
-(category, count) = spend_dict
+category, count = spend_dict
+
 fig, ax = plt.subplots()
 ax.bar(category, count)
 ax.set_title("# of Purchases by Category")
